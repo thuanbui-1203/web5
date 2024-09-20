@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #b9adad;
+    font-family: Arial, sans-serif;
+}
+
+.container {   
+    background-color: #ec0e0e;
+    width: 85%;
+    height: 85%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: width 0.5s, height 0.5s;
+    cursor: default;
+}
+
+.box:hover {
+    width: 200px;
+    height: 500px;
+    color: red;
+}
+
+.signature {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    opacity: 1;
+}
+
+.info {
+    opacity: 0;
+    font-size: 1rem;
+    color: white;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+}
+
+.box:hover .info {
+    opacity: 1;
+}
+
+.box:hover .signature {
+    opacity: 0;
+}
